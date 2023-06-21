@@ -1,0 +1,70 @@
+ZEPETO Multiplay Bootstrap
+===================================================
+
+███████╗███████╗██████╗ ███████╗████████╗ ██████╗ 
+╚══███╔╝██╔════╝██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗
+  ███╔╝ █████╗  ██████╔╝█████╗     ██║   ██║   ██║
+ ███╔╝  ██╔══╝  ██╔═══╝ ██╔══╝     ██║   ██║   ██║
+███████╗███████╗██║     ███████╗   ██║   ╚██████╔╝
+╚══════╝╚══════╝╚═╝     ╚══════╝   ╚═╝    ╚═════╝ 
+
+===================================================
+sandboxWorldId : 'com.magdev.test'
+sandboxWorldVersion : '0.1'
+sandboxMaxClients : 24
+sandboxPackageVersion : '1.1.18'
+gatewayPort : 59170
+host : '10.67.64.87'
+===================================================
+Source File :  /Users/user/Downloads/test/Assets/World.multiplay/index.ts
+[info] 2023-06-20T07:32:04.101Z gameserver 10.67.64.87:0 listen
+[info] 2023-06-20T07:32:12.715Z gameserver multiplay room application created.
+throttling due to excessive CPU usage..
+The visitCount is: 1
+join player, USER_-oC5t7dN4ce
+[info] 2023-06-20T07:32:14.228Z gameserver session [USER_-oC5t7dN4ce] in room [ROOM_xcA7U1t9s] joined.
+master->, USER_-oC5t7dN4ce
+master->, undefined
+leave player, USER_-oC5t7dN4ce
+[info] 2023-06-20T07:34:18.896Z gameserver session [USER_-oC5t7dN4ce] in room [ROOM_xcA7U1t9s] leaved.
+[info] 2023-06-20T07:34:25.700Z gameserver multiplay room application created.
+The visitCount is: 2
+join player, USER_WGdLL-lrvvr
+[info] 2023-06-20T07:34:26.361Z gameserver session [USER_WGdLL-lrvvr] in room [ROOM_IkPqE03x5] joined.
+master->, USER_WGdLL-lrvvr
+master->, undefined
+leave player, USER_WGdLL-lrvvr
+[info] 2023-06-20T07:34:35.481Z gameserver session [USER_WGdLL-lrvvr] in room [ROOM_IkPqE03x5] leaved.
+[info] 2023-06-20T07:34:41.947Z gameserver multiplay room application created.
+The visitCount is: 3
+join player, USER_r4MGy3m9cie
+[info] 2023-06-20T07:34:42.591Z gameserver session [USER_r4MGy3m9cie] in room [ROOM_cZrQsEA3A] joined.
+master->, USER_r4MGy3m9cie
+master->, undefined
+leave player, USER_r4MGy3m9cie
+[info] 2023-06-20T08:13:50.835Z gameserver session [USER_r4MGy3m9cie] in room [ROOM_cZrQsEA3A] leaved.
+[info] 2023-06-20T08:13:58.116Z gameserver multiplay room application created.
+The visitCount is: 4
+join player, USER_cXEPN2tHhBc
+[info] 2023-06-20T08:13:58.712Z gameserver session [USER_cXEPN2tHhBc] in room [ROOM_9c3ci4GH-] joined.
+master->, USER_cXEPN2tHhBc
+master->, undefined
+leave player, USER_cXEPN2tHhBc
+[info] 2023-06-20T08:15:07.852Z gameserver session [USER_cXEPN2tHhBc] in room [ROOM_9c3ci4GH-] leaved.
+[info] 2023-06-20T08:15:14.563Z gameserver multiplay room application created.
+The visitCount is: 5
+join player, USER_H3gcgiRfZrI
+[info] 2023-06-20T08:15:15.202Z gameserver session [USER_H3gcgiRfZrI] in room [ROOM_glGP6TKNp] joined.
+master->, USER_H3gcgiRfZrI
+master->, undefined
+leave player, USER_H3gcgiRfZrI
+[info] 2023-06-20T08:18:05.383Z gameserver session [USER_H3gcgiRfZrI] in room [ROOM_glGP6TKNp] leaved.
+[info] 2023-06-20T08:18:12.045Z gameserver multiplay room application created.
+The visitCount is: 6
+join player, USER_t-YwC1uMatE
+[info] 2023-06-20T08:18:12.693Z gameserver session [USER_t-YwC1uMatE] in room [ROOM_RxOdOVK08] joined.
+master->, USER_t-YwC1uMatE
+master->, undefined
+leave player, USER_t-YwC1uMatE
+[info] 2023-06-20T10:54:45.698Z gameserver session [USER_t-YwC1uMatE] in room [ROOM_RxOdOVK08] leaved.
+no activity in the process and it terminate

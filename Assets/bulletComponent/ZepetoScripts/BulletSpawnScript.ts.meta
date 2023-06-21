@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 0730057f9821a4dc5977013212428fee
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    BulletSpawnScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.speed = 20;\r\n    }\r\n   
+    Start() {\r\n    }\r\n    OnSpawn() {\r\n        this.GetComponent($typeof(UnityEngine_1.Rigidbody)).velocity
+    = __UnityEngine__.Vector3.op_Multiply(this.transform.forward, this.speed);\r\n   
+    }\r\n}\r\nexports.default = BulletSpawnScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQnVsbGV0U3Bhd25TY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJCdWxsZXRTcGF3blNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSw2Q0FBa0Q7QUFDbEQsaURBQXFEO0FBR3JELE1BQXFCLGlCQUFrQixTQUFRLHFDQUFxQjtJQUFwRTs7UUFFOEIsVUFBSyxHQUFXLEVBQUUsQ0FBQztJQVlqRCxDQUFDO0lBVEcsS0FBSztJQUVMLENBQUM7SUFFRCxPQUFPO1FBRUgsSUFBSSxDQUFDLFlBQVksU0FBQyx1QkFBUyxHQUFJLFFBQVEsMkJBR29tckIsV0FBWSxDQUg3bXJCLElBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxFQUFHLElBQUksQ0FBQyxLQUFLLENBQUEsQ0FBQztJQUNsRixDQUFDO0NBRUo7QUFkRCxvQ0FjQyJ9","assetPath":"Assets/bulletComponent/ZepetoScripts/BulletSpawnScript.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":["20"],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"BulletSpawnScript","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: f246ae4ee502e35d9360c1e762d79725
+  onlyWriteTrigger: 0

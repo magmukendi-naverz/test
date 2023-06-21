@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 2159913919c78403ca0fa1e1f65b0229
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst
+    UnityEngine_2 = require(\"UnityEngine\");\r\nclass Storage extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.multiplay = UnityEngine_2.Object.FindObjectOfType($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\r\n       
+    this.multiplay.add_RoomJoined((room) => {\r\n            this.room = room;\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if (UnityEngine_1.Input.GetKey(UnityEngine_1.KeyCode.DownArrow))
+    {\r\n            console.log(\"Going down\");\r\n            this.txt.text =
+    \"going down\";\r\n            this.room.Send(\"level\", \"\");\r\n        }\r\n       
+    else {\r\n            this.txt.text = \"normal\";\r\n        }\r\n    }\r\n}\r\nexports.default
+    = Storage;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RvcmFnZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlN0b3JhZ2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEM7QUFHNUMsaURBQXFEO0FBQ3JELCtDQUFvRDtBQUNwRCw2Q0FBK007QUFLL00sTUFBcUIsT0FBUSxTQUFRLHFDQUFxQjtJQVN0RCxLQUFLO1FBRUQsSUFBSSxDQUFDLFNBQVMsR0FBRyxvQkFBTSxDQUFDLGdCQUFnQixTQUFDLG1DQUFvQixFQUFHLENBQUM7UUFDakUsSUFBSSxDQUFDLFNBQVMsZ0JBQWUsQ0FBQyxJQUFVLEVBQUUsRUFBRTtZQUV4QyxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNyQixDQUFDLEVBQUE7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUVGLElBQUcsbUJBQUssQ0FBQyxNQUFNLENBQUMscUJBQU8sQ0FBQyxTQUFTLENBQUMsRUFDbEM7WUFDSSxPQUFPLENBQUMsR0FBRyxDQUFDLFlBQVksQ0FBQyxDQUFDO1lBQzFCLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxHQUFHLFlBQVksQ0FBQTtZQUU1QixJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsRUFBRSxDQUFDLENBQUE7U0FDOUI7YUFDRztZQUNBLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxHQUFHLFFBQVEsQ0FBQTtTQUN2QjtJQUNULENBQUM7Q0FFSjtBQWhDRCwwQkFnQ0MifQ==","assetPath":"Assets/Storage.ts","manifest":{"properties":[{"assembly":"ZEPETO.Character.Controller","name":"zepetoPlayer","type":"ZEPETO.Character.Controller.ZepetoPlayer","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]},{"assembly":"UnityEngine.UI","name":"value","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"txt","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Storage","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 1812f78af59d34aab4ad34d05725b91b
+  onlyWriteTrigger: 0

@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 9c26ce423222a4e52ab77c45be1c901f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Addition extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.value = 0;\r\n        this.gameObject.GetComponent($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\r\n            this.Increase();\r\n        });\r\n        this.multiplay.add_RoomJoined((room)
+    => {\r\n            this.room = room;\r\n        });\r\n    }\r\n    Increase()
+    {\r\n        this.value += 1;\r\n        console.log(`This is the value: ${this.value}`);\r\n       
+    this.disp.text = this.value.toString();\r\n        this.room.Send(MESSAGE.IncreaseLevel,
+    \"Hello world\");\r\n    }\r\n}\r\nexports.default = Addition;\r\nvar MESSAGE;\r\n(function
+    (MESSAGE) {\r\n    /** Adding level */\r\n    MESSAGE[\"IncreaseLevel\"] = \"IncreaseLevel\";\r\n   
+    MESSAGE[\"ReduceLevel\"] = \"ReduceLevel\";\r\n})(MESSAGE || (MESSAGE = {}));\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWRkaXRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJBZGRpdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLG1EQUE4QztBQUU5QyxpREFBcUQ7QUFHckQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQU92RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLEtBQUssR0FBRyxDQUFDLENBQUM7UUFDZixJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyx1QkFBTSxHQUFJLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO1lBRTNELElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQztRQUNwQixDQUFDLENBQUMsQ0FBQTtRQUNGLElBQUksQ0FBQyxTQUFTLGdCQUFlLENBQUMsSUFBVSxFQUFFLEVBQUU7WUFDeEMsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7UUFFckIsQ0FBQyxFQUFBO0lBQ0wsQ0FBQztJQUlELFFBQVE7UUFFSixJQUFJLENBQUMsS0FBSyxJQUFJLENBQUMsQ0FBQztRQUNoQixPQUFPLENBQUMsR0FBRyxDQUFDLHNCQUFzQixJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQTtRQUMvQyxJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFFBQVEsRUFBRSxDQUFDO1FBQ3ZDLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxhQUFhLEVBQUUsYUFBYSxDQUFDLENBQUE7SUFFeEQsQ0FBQztDQUVKO0FBOUJELDJCQThCQztBQUVELElBQUssT0FRSjtBQVJELFdBQUssT0FBTztJQUdSLG1CQUFtQjtJQUVuQiwwQ0FBK0IsQ0FBQTtJQUMvQixzQ0FBMkIsQ0FBQTtBQUUvQixDQUFDLEVBUkksT0FBTyxLQUFQLE9BQU8sUUFRWCJ9","assetPath":"Assets/bulletComponent/ZepetoScripts/Actions/Addition.ts","manifest":{"properties":[{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"disp","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"","name":"room","type":"ZEPETO.Multiplay.Room","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"Addition","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 1e9b37b903980600119ad479e48252c5
+  onlyWriteTrigger: 0
