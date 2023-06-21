@@ -1,0 +1,62 @@
+fileFormatVersion: 2
+guid: 0bcb8f5630c4f4ced9c92d163c186127
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst
+    ZepetoPlayersManager_1 = require(\"../Zepeto Multiplay Component/ZepetoScript/Player/ZepetoPlayersManager\");\r\n/**
+    Did not implement this feature using the enum */\r\n/**\r\n *\r\n *\r\nexport
+    enum PlayerNumber {\r\n    PLAYER1, PLAYER2, PLAYER3, PLAYER4, PLAYER5, PLAYER6,
+    PLAYER7, PLAYER8, PLAYER9, PLAYER10,\r\n    PLAYER11, PLAYER12, PLAYER13, PLAYER14,
+    PLAYER15, PLAYER16, PLAYER17, PLAYER18, PLAYER19,\r\n    PLAYER20, PLAYER21,
+    PLAYER22, PLAYER23, PLAYER24,\r\n}\r\n*/\r\nclass ProfileImageLoader extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.tries = 0;\r\n        this.maxTries = 10;\r\n    }\r\n    Start() {\r\n       
+    console.log(\"Start\");\r\n        this.multiplay.add_RoomJoined((room) => {\r\n           
+    this.room = room;\r\n        });\r\n        this.StartCoroutine(this.LoadProfilePic());\r\n   
+    }\r\n    GetSprite(texture) {\r\n        let rect = new UnityEngine_1.Rect(0,
+    0, texture.width, texture.height);\r\n        return UnityEngine_1.Sprite.Create(texture,
+    rect, new UnityEngine_1.Vector2(0.5, 0.5));\r\n    }\r\n    *LoadProfilePic()
+    {\r\n        console.log(\"Loading Pic..\");\r\n        while (!ZepetoPlayersManager_1.default.instance.IsReady())
+    {\r\n            yield null;\r\n        }\r\n        let player = ZepetoPlayersManager_1.default.instance.GetPlayer(this.room.SessionId);\r\n       
+    while (player == undefined || player == null) {\r\n            console.log(\"Grabbing
+    Player: \" + this.tries);\r\n            player = ZepetoPlayersManager_1.default.instance.GetPlayer(this.room.SessionId);\r\n           
+    yield new UnityEngine_1.WaitForSeconds(1.0);\r\n            this.tries++;\r\n           
+    if (this.tries >= this.maxTries) {\r\n                return;\r\n           
+    }\r\n        }\r\n        this.GetUserDetails(player.zepetoUserId);\r\n    }\r\n   
+    // A function to collect the user Pict, the user name, follower count, following
+    number and the date the user joined.\r\n    GetUserDetails(userId) {\r\n       
+    ZEPETO_World_1.ZepetoWorldHelper.GetProfileTexture(userId, (texture) => {\r\n           
+    this.img.sprite = this.GetSprite(texture);\r\n        }, (error) => {\r\n           
+    console.log(error);\r\n        });\r\n        let userDetail = ZEPETO_World_1.WorldMultiplayContent.instance.GetUserInfo(userId);\r\n       
+    this.numberOfFollower.text = `Follower: ${userDetail.followerCount.toString()}`;\r\n       
+    this.numberOfFollowing.text = `Following: ${userDetail.followingCount.toString()}`;\r\n       
+    this.userId.text = `UserId:${userDetail.name}`;\r\n        this.createdDate.text
+    = `creationDate: ${this.ConvertBigIttoDate(userDetail.userRegistrationDate)}`;\r\n   
+    }\r\n    //This function convert the bigint into readable date [YYYY.MM.DD]\r\n   
+    ConvertBigIttoDate(data) {\r\n        const dateInNumber = parseInt(data.toString());\r\n       
+    const timeInSeconds = Math.floor(dateInNumber / 1000);\r\n        const d = new
+    Date(dateInNumber);\r\n        const dateFormatted = `${d.getFullYear()}.${(d.getMonth()
+    + 1).toString().padStart(2, ''0'')}.${d.getDate().toString().padStart(2, ''0'')}`;\r\n       
+    return dateFormatted;\r\n    }\r\n}\r\nexports.default = ProfileImageLoader;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJvZmlsZUltYWdlTG9hZGVyMS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlByb2ZpbGVJbWFnZUxvYWRlcjEudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUc7QUFDbkcsaURBQXFEO0FBQ3JELCtDQUF3RztBQUV4RyxpSEFBMEc7QUFLMUcsb0RBQW9EO0FBQ3BEOzs7Ozs7OztFQVFFO0FBQ0YsTUFBcUIsa0JBQW1CLFNBQVEscUNBQXFCO0lBQXJFOztRQVFZLFVBQUssR0FBVyxDQUFDLENBQUM7UUFDbEIsYUFBUSxHQUFXLEVBQUUsQ0FBQztJQStEbEMsQ0FBQztJQTFERyxLQUFLO1FBQ0QsT0FBTyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUVyQixJQUFJLENBQUMsU0FBUyxnQkFBZSxDQUFDLElBQVMsRUFBQyxFQUFFO1lBQ3RDLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLENBQUMsRUFBQTtRQUNELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDLENBQUM7SUFDL0MsQ0FBQztJQUVELFNBQVMsQ0FBQyxPQUFnQjtRQUN0QixJQUFJLElBQUksR0FBUyxJQUFJLGtCQUFJLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRSxPQUFPLENBQUMsS0FBSyxFQUFFLE9BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUMvRCxPQUFPLG9CQUFNLENBQUMsTUFBTSxDQUFDLE9BQW9CLEVBQUUsSUFBSSxFQUFFLElBQUkscUJBQU8sQ0FBQyxHQUFHLEVBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQztJQUM1RSxDQUFDO0lBRU8sQ0FBQyxjQUFjO1FBRW5CLE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7UUFDN0IsT0FBTyxDQUFDLDhCQUFvQixDQUFDLFFBQVEsQ0FBQyxPQUFPLEVBQUUsRUFBRTtZQUFDLE1BQU0sSUFBSSxDQUFDO1NBQUM7UUFFOUQsSUFBSSxN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","assetPath":"Assets/ProfileImageLoader/ProfileImageLoader1.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"img","type":"UnityEngine.UI.Image","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"userId","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"numberOfFollower","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"numberOfFollowing","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"createdDate","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"Header","args":["\"Multiplay
+    GameObject\""]},{"name":"SerializeField","args":[]}]}],"name":"ProfileImageLoader","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 36ab711e48da0ed801e6a8037390a7e8
+  onlyWriteTrigger: 0

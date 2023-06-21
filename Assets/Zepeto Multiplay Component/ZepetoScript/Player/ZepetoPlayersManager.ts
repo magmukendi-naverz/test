@@ -6,7 +6,6 @@ import {State, Player} from "ZEPETO.Multiplay.Schema";
 import {GameObject, Object, Quaternion, Vector3, WaitForSeconds} from "UnityEngine";
 import PlayerSync from './PlayerSync';
 import TransformSyncHelper,{PositionExtrapolationType, PositionInterpolationType} from '../Transform/TransformSyncHelper';
-import { PlayerNumber } from '../../../Scripts/ProfileImageLoader';
 
 export enum ZepetoPlayerSpawnType {
     NoneSpawn,//Do not create players
