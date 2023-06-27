@@ -2,7 +2,7 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script';
 import { CharacterState, LocalPlayer, SpawnInfo, ZepetoCharacter, ZepetoPlayers, ZepetoScreenTouchpad} from 'ZEPETO.Character.Controller';
 import { OfficialContentType, WorldService, ZepetoWorldContent, Content } from 'ZEPETO.World';
 import { RawImage, Text, Button } from 'UnityEngine.UI';
-import { Object, GameObject, Texture2D, Transform, WaitUntil, AnimationClip, WrapMode } from 'UnityEngine';
+import { Object, GameObject, Texture2D, Transform, AnimationClip, WaitForSeconds } from 'UnityEngine';
 import Thumbnail from './Thumbnail';
 
 export default class GestureLoader extends ZepetoScriptBehaviour {
@@ -17,6 +17,8 @@ export default class GestureLoader extends ZepetoScriptBehaviour {
     @SerializeField() private _loopingAnimation: boolean;
     private _myCharacter: ZepetoCharacter;
     private animation: AnimationClip;
+    private readonly _tick: number = 0.04;
+
     
     Start() {
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
@@ -76,42 +78,50 @@ export default class GestureLoader extends ZepetoScriptBehaviour {
             // If the animation has not been downloaded, download it.
             content.DownloadAnimation(() => {
                 // play animation clip
-                this.runAnimation(this._myCharacter, content.AnimationClip)
+
+                this.runAnimation(content.AnimationClip)
 
             });    
         } else {
-            this.runAnimation(this._myCharacter, content.AnimationClip)
-        }
-    }
-    Update()
-    {
-        if(this._loopingAnimation == true && this._myCharacter.CurrentState === CharacterState.Idle || this._myCharacter.CurrentState === CharacterState.Invalid)
-        {
-            console.log("CURRENTLY LOOPING")
-            this.runAnimation(this._myCharacter, null)
-        }
-        
-        else{
-            console.log("Character is nor idle nor doing any gesture")
+            this.runAnimation(content.AnimationClip)
         }
     }
 
+
     // A function to run an animation, 
-    private runAnimation(character:ZepetoCharacter, animation: AnimationClip)
+    private runAnimation(animation: AnimationClip )
     {
-        
+
         if(animation !== null)
         {
             this.animation = animation
-            this._loopingAnimation = true ;
         }
-        character.SetGesture(this.animation)
+        if(this._loopingAnimation === true)
+        {
+            this.StartCoroutine(this.setGest(this._tick, this.animation))
+        }
+        else{
+            this._myCharacter.SetGesture(this.animation)
+        }
 
     }
 
     private StopGesture() {
+        this.StopAllCoroutines()
         this._myCharacter.CancelGesture();
-        this._loopingAnimation = false;
+    }
+
+    private *setGest(tick:number, animation:AnimationClip = null)
+    {
+
+        console.log("Started the looop")
+        //while (this._myCharacter.CurrentState !== CharacterState.Gesture) {yield null;}
+        while(this._myCharacter.CurrentState == CharacterState.Idle || this._myCharacter.CurrentState == CharacterState.Invalid)
+        {
+            console.log("CURRENTLY LOOPING")
+            this._myCharacter.SetGesture(animation)
+        }
+        yield new WaitForSeconds(tick);
     }
 
 }

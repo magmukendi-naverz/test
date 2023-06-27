@@ -6,7 +6,6 @@ import ZepetoPlayersManager from '../Zepeto Multiplay Component/ZepetoScript/Pla
 import { Room } from 'ZEPETO.Multiplay';
 import { ZepetoCamera } from 'ZEPETO.Character.Controller';
 
-
 /** Did not implement this feature using the enum */
 /**
  * 
@@ -63,8 +62,8 @@ export default class ProfileImageLoader extends ZepetoScriptBehaviour {
         }
         this.GetUserDetails(player.zepetoUserId)
     }
-
-
+    
+    Social
     // A function to collect the user Pict, the user name, follower count, following number and the date the user joined.
     private GetUserDetails(userId)
     {
@@ -79,6 +78,7 @@ export default class ProfileImageLoader extends ZepetoScriptBehaviour {
         this.userId.text = `UserId:${userDetail.name}`;
         this.createdDate.text = `creationDate: ${this.ConvertBigIttoDate(userDetail.userRegistrationDate)}`
     }
+
 
     //This function convert the bigint into readable date [YYYY.MM.DD]
     private ConvertBigIttoDate(data:bigint)

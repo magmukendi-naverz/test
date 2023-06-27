@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638223261000000000
-    m_Hash: 330200091
+      ticks: 638229348170000000
+    m_Hash: 2162656187
   m_LockFileStatus:
     m_FilePath: /Users/user/Downloads/test/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638223261020000000
-    m_Hash: 674894606
+      ticks: 638229348170000000
+    m_Hash: 4089774588
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -832,12 +832,191 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: zepeto.world@1.18.0
+    - packageId: zepeto.module@0.3.0-preview
       testable: 0
       isDirectDependency: 1
-      version: 1.18.0
+      version: 0.3.0-preview
       source: 1
-      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.world@1.18.0
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.module@0.3.0-preview
+      assetPath: Packages/zepeto.module
+      name: zepeto.module
+      displayName: ZEPETO.Module
+      author:
+        name: ZEPETO
+        email: support@zepeto.me
+        url: https://zepeto.me/
+      category: Unity
+      type: 
+      description: Module System Package for Creating Zepeto World
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.0-preview
+        - 0.2.0-preview
+        - 0.3.0-preview
+        compatible:
+        - 0.1.0-preview
+        - 0.2.0-preview
+        - 0.3.0-preview
+        verified: 
+      dependencies:
+      - name: zepeto.script
+        version: 1.11.0
+      - name: zepeto.event.bus
+        version: 0.4.0
+      - name: zepeto.character
+        version: 3.1.16
+      - name: zepeto.multiplay
+        version: 1.9.0
+      resolvedDependencies:
+      - name: zepeto.script
+        version: 1.12.0
+      - name: zepeto.event.bus
+        version: 0.5.0
+      - name: zepeto.character
+        version: 3.1.16
+      - name: zepeto.asset
+        version: 1.1.0
+      - name: com.unity.scriptablebuildpipeline
+        version: 1.15.2
+      - name: com.unity.modules.cloth
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.video
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: zepeto.multiplay
+        version: 1.10.0
+      - name: com.unity.nuget.newtonsoft-json
+        version: 2.0.0
+      keywords:
+      - zepeto
+      - script
+      - javascript
+      - module
+      registry:
+        id: scoped:ZEPETO
+        name: ZEPETO
+        url: https://upm.zepeto.run
+        scopes:
+        - zepeto
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 638221484729150000
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: zepeto.studio@3.2.8
+      testable: 0
+      isDirectDependency: 1
+      version: 3.2.8
+      source: 1
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.studio@3.2.8
+      assetPath: Packages/zepeto.studio
+      name: zepeto.studio
+      displayName: ZEPETO.Studio
+      author:
+        name: ZEPETO
+        email: support@zepeto.me
+        url: https://zepeto.me/
+      category: Unity
+      type: 
+      description: ZEPETO Studio SDK
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 3.2.3
+        - 3.2.4
+        - 3.2.5
+        - 3.2.6
+        - 3.2.7
+        - 3.2.8
+        compatible:
+        - 3.2.3
+        - 3.2.4
+        - 3.2.5
+        - 3.2.6
+        - 3.2.7
+        - 3.2.8
+        verified: 
+      dependencies:
+      - name: zepeto.asset
+        version: 1.0.12
+      - name: zepeto.asset.protector
+        version: 0.0.3
+      - name: zepeto.character
+        version: 3.1.15
+      resolvedDependencies:
+      - name: zepeto.asset
+        version: 1.1.0
+      - name: com.unity.scriptablebuildpipeline
+        version: 1.15.2
+      - name: zepeto.asset.protector
+        version: 0.0.3
+      - name: zepeto.character
+        version: 3.1.16
+      - name: com.unity.modules.cloth
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.video
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      keywords:
+      - zepeto
+      registry:
+        id: scoped:ZEPETO
+        name: ZEPETO
+        url: https://upm.zepeto.run
+        scopes:
+        - zepeto
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 638186012378130000
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: zepeto.world@1.19.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.19.0
+      source: 1
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.world@1.19.0
       assetPath: Packages/zepeto.world
       name: zepeto.world
       displayName: ZEPETO.World
@@ -932,17 +1111,17 @@ m_PackageAssets:
       - name: zepeto.script
         version: 1.12.0
       - name: zepeto.event.bus
-        version: 0.4.0
+        version: 0.5.0
       - name: zepeto.multiplay
         version: 1.10.0
       - name: zepeto.multiplay.script
-        version: 1.10.0
+        version: 1.11.0
       - name: zepeto.chat
         version: 1.1.0
       - name: zepeto.character
         version: 3.1.16
       - name: zepeto.character.controller
-        version: 1.9.0
+        version: 1.10.0
       - name: zepeto.script.unityengine.typings
         version: 1.0.6
       - name: zepeto.iwp
@@ -971,13 +1150,13 @@ m_PackageAssets:
       - name: zepeto.script
         version: 1.12.0
       - name: zepeto.event.bus
-        version: 0.4.0
+        version: 0.5.0
       - name: zepeto.multiplay
         version: 1.10.0
       - name: com.unity.nuget.newtonsoft-json
         version: 2.0.0
       - name: zepeto.multiplay.script
-        version: 1.10.0
+        version: 1.11.0
       - name: zepeto.chat
         version: 1.1.0
       - name: zepeto.character
@@ -1001,7 +1180,7 @@ m_PackageAssets:
       - name: com.unity.modules.unitywebrequest
         version: 1.0.0
       - name: zepeto.character.controller
-        version: 1.9.0
+        version: 1.10.0
       - name: com.unity.inputsystem
         version: 1.0.2
       - name: zepeto.script.unityengine.typings
@@ -1039,7 +1218,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 638212022690600000
+      datePublishedTicks: 638221483438590000
       documentationUrl: 
       hasRepository: 0
       repository:
@@ -3057,12 +3236,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: zepeto.event.bus@0.4.0
+    - packageId: zepeto.event.bus@0.5.0
       testable: 0
       isDirectDependency: 0
-      version: 0.4.0
+      version: 0.5.0
       source: 1
-      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.event.bus@0.4.0
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.event.bus@0.5.0
       assetPath: Packages/zepeto.event.bus
       name: zepeto.event.bus
       displayName: ZEPETO.Event.Bus
@@ -3081,11 +3260,13 @@ m_PackageAssets:
         - 0.2.0
         - 0.3.0
         - 0.4.0
+        - 0.5.0
         compatible:
         - 0.1.0
         - 0.2.0
         - 0.3.0
         - 0.4.0
+        - 0.5.0
         verified: 
       dependencies: []
       resolvedDependencies: []
@@ -3105,7 +3286,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 638198008122250000
+      datePublishedTicks: 638221479633930000
       documentationUrl: 
       hasRepository: 0
       repository:
@@ -3203,12 +3384,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: zepeto.multiplay.script@1.10.0
+    - packageId: zepeto.multiplay.script@1.11.0
       testable: 0
       isDirectDependency: 0
-      version: 1.10.0
+      version: 1.11.0
       source: 1
-      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.multiplay.script@1.10.0
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.multiplay.script@1.11.0
       assetPath: Packages/zepeto.multiplay.script
       name: zepeto.multiplay.script
       displayName: ZEPETO.Multiplay.Script
@@ -3241,6 +3422,7 @@ m_PackageAssets:
         - 1.8.0
         - 1.9.0
         - 1.10.0
+        - 1.11.0
         compatible:
         - 1.0.2
         - 1.0.3
@@ -3260,6 +3442,7 @@ m_PackageAssets:
         - 1.8.0
         - 1.9.0
         - 1.10.0
+        - 1.11.0
         verified: 
       dependencies: []
       resolvedDependencies: []
@@ -3279,7 +3462,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 638212019358060000
+      datePublishedTicks: 638221478297560000
       documentationUrl: 
       hasRepository: 0
       repository:
@@ -3456,12 +3639,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: zepeto.character.controller@1.9.0
+    - packageId: zepeto.character.controller@1.10.0
       testable: 0
       isDirectDependency: 0
-      version: 1.9.0
+      version: 1.10.0
       source: 1
-      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.character.controller@1.9.0
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.character.controller@1.10.0
       assetPath: Packages/zepeto.character.controller
       name: zepeto.character.controller
       displayName: ZEPETO.Character.Controller
@@ -3498,6 +3681,7 @@ m_PackageAssets:
         - 1.7.0
         - 1.8.0
         - 1.9.0
+        - 1.10.0
         compatible:
         - 1.0.2
         - 1.0.3
@@ -3521,6 +3705,7 @@ m_PackageAssets:
         - 1.7.0
         - 1.8.0
         - 1.9.0
+        - 1.10.0
         verified: 
       dependencies:
       - name: com.unity.inputsystem
@@ -3544,7 +3729,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 638198011407720000
+      datePublishedTicks: 638221480910220000
       documentationUrl: 
       hasRepository: 0
       repository:
@@ -4463,6 +4648,62 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
         revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
         path: 
+    - packageId: zepeto.asset.protector@0.0.3
+      testable: 0
+      isDirectDependency: 0
+      version: 0.0.3
+      source: 1
+      resolvedPath: /Users/user/Downloads/test/Library/PackageCache/zepeto.asset.protector@0.0.3
+      assetPath: Packages/zepeto.asset.protector
+      name: zepeto.asset.protector
+      displayName: ZEPETO.Asset.Protector
+      author:
+        name: 
+        email: 
+        url: 
+      category: Unity
+      type: 
+      description: Block code that accesses the asset, protecting the content from
+        things like the FBX Exporter.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.1
+        - 0.0.2
+        - 0.0.3
+        compatible:
+        - 0.0.1
+        - 0.0.2
+        - 0.0.3
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - zepeto
+      - asset
+      - protector
+      registry:
+        id: scoped:ZEPETO
+        name: ZEPETO
+        url: https://upm.zepeto.run
+        scopes:
+        - zepeto
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 638084163582660000
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.ext.nunit@1.0.6
       testable: 0
       isDirectDependency: 0
@@ -4690,6 +4931,7 @@ m_PackageAssets:
         - 1.0.12
         - 1.0.13
         - 1.1.0
+        - 1.1.1
         compatible:
         - 1.0.4
         - 1.0.5
@@ -4701,6 +4943,7 @@ m_PackageAssets:
         - 1.0.12
         - 1.0.13
         - 1.1.0
+        - 1.1.1
         verified: 
       dependencies:
       - name: com.unity.scriptablebuildpipeline
